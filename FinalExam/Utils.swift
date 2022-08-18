@@ -50,3 +50,25 @@ func styleCollectionViewCell(_ cell: UICollectionViewCell) -> UICollectionViewCe
     cell.layer.shadowPath = UIBezierPath(rect: cell.layer.bounds).cgPath
     return cell
 }
+
+// load local json file
+func loadJson(filename fileName: String) -> [CovidData]? {
+    if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let jsonData = try decoder.decode([CovidData].self, from: data)
+            return jsonData
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    return nil
+}
+
+// decode the covid data
+func decodeCovidData(covidData: [CovidData]) -> Void {
+    for item in covidData {
+        print(item.totalConfirmed)
+    }
+}
