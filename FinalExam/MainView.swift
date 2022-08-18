@@ -34,7 +34,7 @@ class MainView: UIViewController {
         // allow shadows overflow the bounds
         collectionView.clipsToBounds = false
         // apply background color programming
-        collectionView.backgroundColor = hexStringToUIColor(hex: "#2B2F39")
+        collectionView.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR)
         
         // load json data and init the values
         let data = loadJson(filename: "covid_data")!

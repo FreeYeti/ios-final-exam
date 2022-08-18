@@ -38,11 +38,11 @@ func styleCollectionViewCell(_ cell: UICollectionViewCell) -> UICollectionViewCe
     
     cell.contentView.layer.cornerRadius = 10.0
     cell.contentView.layer.borderWidth = 1.0
-    cell.contentView.layer.backgroundColor = hexStringToUIColor(hex: "#C0B89D").cgColor
-    cell.contentView.layer.borderColor = hexStringToUIColor(hex: "#9D9F93").cgColor
+    cell.contentView.layer.backgroundColor = hexStringToUIColor(hex: CONFIG_SECONDARY_BGCOLOR).cgColor
+    cell.contentView.layer.borderColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
     cell.contentView.layer.masksToBounds = true
     
-    cell.layer.shadowColor = hexStringToUIColor(hex: "#9D9F93").cgColor
+    cell.layer.shadowColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
     cell.layer.shadowOffset = CGSize(width: 2, height: 3)
     cell.layer.shadowRadius = 5.0
     cell.layer.shadowOpacity = 1
