@@ -51,13 +51,13 @@ extension MainView: UICollectionViewDelegateFlowLayout{
         if(indexPath.row < 3){
             // first row
             let width  = (view.frame.width - 20) / 3 - 7
-            return CGSize(width: width, height: 50)
+            return CGSize(width: width, height: 90)
         }else if (indexPath.row < 5){
             // second row
             let width  = (view.frame.width - 20) / 2 - 6
-            return CGSize(width: width, height: 50)
+            return CGSize(width: width, height: 90)
         }else{
-            return CGSize(width: view.frame.width, height: 50)
+            return CGSize(width: view.frame.width, height: 90)
         }
     }
 }
