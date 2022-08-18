@@ -43,9 +43,9 @@ func styleCollectionViewCell(_ cell: UICollectionViewCell) -> UICollectionViewCe
     cell.contentView.layer.masksToBounds = true
     
     cell.layer.shadowColor = hexStringToUIColor(hex: "#9D9F93").cgColor
-    cell.layer.shadowOffset = CGSize(width: -1, height: 1)
-    cell.layer.shadowRadius = 10.0
-    cell.layer.shadowOpacity = 0.5
+    cell.layer.shadowOffset = CGSize(width: 2, height: 3)
+    cell.layer.shadowRadius = 5.0
+    cell.layer.shadowOpacity = 1
     cell.layer.masksToBounds = false
     cell.layer.shadowPath = UIBezierPath(rect: cell.layer.bounds).cgPath
     return cell
