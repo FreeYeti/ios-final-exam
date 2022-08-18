@@ -36,12 +36,14 @@ func styleCollectionViewCell(_ cell: UICollectionViewCell) -> UICollectionViewCe
     cell.clipsToBounds = false
     cell.contentView.clipsToBounds = false
     
+    // for border and background
     cell.contentView.layer.cornerRadius = 10.0
     cell.contentView.layer.borderWidth = 1.0
     cell.contentView.layer.backgroundColor = hexStringToUIColor(hex: CONFIG_SECONDARY_BGCOLOR).cgColor
     cell.contentView.layer.borderColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
     cell.contentView.layer.masksToBounds = true
     
+    // for shadow
     cell.layer.shadowColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
     cell.layer.shadowOffset = CGSize(width: 2, height: 3)
     cell.layer.shadowRadius = 5.0
@@ -52,6 +54,7 @@ func styleCollectionViewCell(_ cell: UICollectionViewCell) -> UICollectionViewCe
 }
 
 // load local json file
+// ref: https://stackoverflow.com/questions/64703105/parsing-data-from-local-json-file-swift
 func loadJson(filename fileName: String) -> [CovidData]? {
     if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
         do {

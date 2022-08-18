@@ -20,6 +20,8 @@ class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR)
+        
         // the layout of collection view
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
