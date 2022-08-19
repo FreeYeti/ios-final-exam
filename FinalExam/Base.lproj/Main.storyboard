@@ -60,11 +60,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <segue destination="B8N-Sa-dRY" kind="show" id="sHo-Vz-KAB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-dQ-Szr">
                                                 <rect key="frame" x="202" y="0.0" width="192" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <segue destination="7ce-km-9gr" kind="show" id="3w4-Ir-sB6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -126,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1989.8550724637682" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Self assessment-->
         <scene sceneID="UjC-wc-r3g">
             <objects>
                 <viewController id="7ce-km-9gr" sceneMemberID="viewController">
@@ -136,12 +142,13 @@
                         <viewLayoutGuide key="safeArea" id="JX6-se-EzS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Self assessment" id="mFj-r6-0c8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbi-QH-fGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3310" y="573"/>
         </scene>
-        <!--View Controller-->
+        <!--Protection-->
         <scene sceneID="xU0-US-c2o">
             <objects>
                 <viewController id="B8N-Sa-dRY" sceneMemberID="viewController">
@@ -151,6 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="VA3-2b-At3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Protection" id="5ct-VS-9dg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKn-Ql-yJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
