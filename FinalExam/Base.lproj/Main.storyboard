@@ -59,7 +59,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glz-c5-N8a">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="80"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="How to avoid infection?"/>
                                                 <connections>
                                                     <segue destination="B8N-Sa-dRY" kind="show" id="sHo-Vz-KAB"/>
                                                 </connections>
@@ -67,7 +67,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-dQ-Szr">
                                                 <rect key="frame" x="202" y="0.0" width="192" height="80"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="self assessment"/>
                                                 <connections>
                                                     <segue destination="7ce-km-9gr" kind="show" id="3w4-Ir-sB6"/>
                                                 </connections>
