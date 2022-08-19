@@ -135,12 +135,12 @@
         <!--Self assessment-->
         <scene sceneID="UjC-wc-r3g">
             <objects>
-                <viewController id="7ce-km-9gr" sceneMemberID="viewController">
+                <viewController id="7ce-km-9gr" customClass="AssessmentView" customModule="FinalExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQj-Su-L50">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JX6-se-EzS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Self assessment" id="mFj-r6-0c8"/>
                 </viewController>
@@ -151,12 +151,12 @@
         <!--Protection-->
         <scene sceneID="xU0-US-c2o">
             <objects>
-                <viewController id="B8N-Sa-dRY" sceneMemberID="viewController">
+                <viewController id="B8N-Sa-dRY" customClass="ProtectionView" customModule="FinalExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3WO-3y-WSg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="VA3-2b-At3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Protection" id="5ct-VS-9dg"/>
                 </viewController>
