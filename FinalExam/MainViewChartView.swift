@@ -11,12 +11,10 @@ import Charts
 class MainViewChartView: UIView, ChartViewDelegate {
 
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+     Not sure is this the best way to load barChart into main view controller?
+     I don't find information about hot to add chart to view controller smoothly,
+     so create this container first, then put the chart into this container.
+     */
     
     var barChart = BarChartView()
     

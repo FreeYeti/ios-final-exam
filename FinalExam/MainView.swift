@@ -23,6 +23,11 @@ class MainView: UIViewController {
     var StateRecoveredRatio: Double?
     var StateDeathsRatio: Double?
     
+    // as aimed at well enginerring, I use severial files to sperate code and logic:
+    // 1. the override functions for Navigation is in MainViewNavigation.swfit
+    // 2. the functions for collection view is in the MainViewDashboard.swift
+    // 3. the view for chart is in the MainViewChartView.swift
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
