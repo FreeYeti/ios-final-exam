@@ -21,6 +21,23 @@ class MainViewChartView: UIView, ChartViewDelegate {
     var barChart = BarChartView()
     
     override func layoutSubviews() {
+        self.clipsToBounds = false
+        self.clipsToBounds = false
+        
+        // for border and background
+        self.layer.cornerRadius = 10.0
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
+        self.layer.masksToBounds = true
+        
+        // for shadow
+        self.layer.shadowColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
+        self.layer.shadowOffset = CGSize(width: 2, height: 3)
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 1
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(rect: self.layer.bounds).cgPath
+        
         barChart.delegate = self
         self.chartViewSubview()
     }

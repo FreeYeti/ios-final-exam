@@ -15,7 +15,6 @@ class MainView: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var barChartView: UIView!
-    var barChart = BarChartView()
     
     // the statistics figures
     var StateTotal: Int?
@@ -36,14 +35,6 @@ class MainView: UIViewController {
         
         // load the collection view
         self.loadCollectionView()
-        
-        // load the chart view
-//        self.loadChartView()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        self.chartViewSubview()
     }
 }
 
