@@ -33,6 +33,13 @@
                                         </collectionViewFlowLayout>
                                         <cells/>
                                     </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCC-6l-Zvq" customClass="MainViewChartView" customModule="FinalExam" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="310" width="394" height="240"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="REi-DM-jnD"/>
+                                        </constraints>
+                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="UJO-dd-rIf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <constraints>
@@ -43,9 +50,12 @@
                                 <constraints>
                                     <constraint firstItem="UJO-dd-rIf" firstAttribute="leading" secondItem="ExK-Vr-cbK" secondAttribute="leading" id="BXV-uZ-SJQ"/>
                                     <constraint firstItem="UJO-dd-rIf" firstAttribute="trailing" secondItem="ExK-Vr-cbK" secondAttribute="trailing" id="Baw-hZ-NeN"/>
+                                    <constraint firstItem="rCC-6l-Zvq" firstAttribute="leading" secondItem="ExK-Vr-cbK" secondAttribute="leading" constant="10" id="GMJ-JR-UYz"/>
                                     <constraint firstItem="ExK-Vr-cbK" firstAttribute="trailing" secondItem="Lef-ld-YKW" secondAttribute="trailing" constant="10" id="Gon-fs-k6H"/>
                                     <constraint firstItem="UJO-dd-rIf" firstAttribute="top" secondItem="9RI-Qk-0HE" secondAttribute="top" id="OPW-da-mzP"/>
+                                    <constraint firstItem="ExK-Vr-cbK" firstAttribute="trailing" secondItem="rCC-6l-Zvq" secondAttribute="trailing" constant="10" id="Q0W-P2-XeZ"/>
                                     <constraint firstItem="Lef-ld-YKW" firstAttribute="leading" secondItem="ExK-Vr-cbK" secondAttribute="leading" constant="10" id="WBn-kc-hWI"/>
+                                    <constraint firstItem="rCC-6l-Zvq" firstAttribute="top" secondItem="Lef-ld-YKW" secondAttribute="bottom" constant="20" id="i0D-KB-UV7"/>
                                     <constraint firstItem="Lef-ld-YKW" firstAttribute="top" secondItem="UJO-dd-rIf" secondAttribute="bottom" constant="20" id="ncZ-7E-JLE"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="9RI-Qk-0HE"/>
@@ -63,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PgJ-Ln-dGY"/>
                     <connections>
+                        <outlet property="barChartView" destination="rCC-6l-Zvq" id="OFm-oD-p8g"/>
                         <outlet property="collectionView" destination="Lef-ld-YKW" id="hSU-Pt-xP6"/>
                         <outlet property="logoImageView" destination="UJO-dd-rIf" id="jO9-0R-SFM"/>
                         <outlet property="scrollView" destination="9wx-Hg-aZW" id="KhM-EI-5mj"/>

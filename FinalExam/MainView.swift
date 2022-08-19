@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import Charts
 
 class MainView: UIViewController {
     
+    // outlets on the screen
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var barChartView: UIView!
+    var barChart = BarChartView()
     
+    // the statistics figures
     var StateTotal: Int?
     var StateRecovered: Int?
     var StateDeaths: Int?
@@ -31,6 +36,14 @@ class MainView: UIViewController {
         
         // load the collection view
         self.loadCollectionView()
+        
+        // load the chart view
+//        self.loadChartView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        self.chartViewSubview()
     }
 }
 
