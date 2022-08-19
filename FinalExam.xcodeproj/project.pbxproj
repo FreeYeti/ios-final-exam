@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047866E528B04D4E00875029 /* ProtectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047866E428B04D4E00875029 /* ProtectionTableView.swift */; };
+		047866E728B04D9D00875029 /* ProtectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047866E628B04D9D00875029 /* ProtectionTableCell.swift */; };
 		049DE63328AE6A8E000923D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE63228AE6A8E000923D4 /* Constants.swift */; };
 		049DE64D28AEB3A6000923D4 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 049DE64C28AEB3A6000923D4 /* Algorithms */; };
 		049DE65028AEB5D4000923D4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 049DE64F28AEB5D4000923D4 /* Charts */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047866E428B04D4E00875029 /* ProtectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionTableView.swift; sourceTree = "<group>"; };
+		047866E628B04D9D00875029 /* ProtectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionTableCell.swift; sourceTree = "<group>"; };
 		049DE63228AE6A8E000923D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		049DE65128AECBDB000923D4 /* MainViewDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDashboard.swift; sourceTree = "<group>"; };
 		049DE65528AF0AE8000923D4 /* MainViewNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigation.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				04E6390228AD9C71004B4492 /* Utils.swift */,
 				04E638FA28AD7F66004B4492 /* AssessmentView.swift */,
 				04E638FC28AD7F93004B4492 /* ProtectionView.swift */,
+				047866E428B04D4E00875029 /* ProtectionTableView.swift */,
+				047866E628B04D9D00875029 /* ProtectionTableCell.swift */,
 				04E638FE28AD885E004B4492 /* DashboardCell.swift */,
 				04E638FF28AD885E004B4492 /* DashboardCell.xib */,
 				04E638C928AD79F8004B4492 /* MainView.swift */,
@@ -317,7 +323,9 @@
 				049DE63328AE6A8E000923D4 /* Constants.swift in Sources */,
 				049DE65228AECBDB000923D4 /* MainViewDashboard.swift in Sources */,
 				04E638C828AD79F8004B4492 /* SceneDelegate.swift in Sources */,
+				047866E728B04D9D00875029 /* ProtectionTableCell.swift in Sources */,
 				04E638FB28AD7F66004B4492 /* AssessmentView.swift in Sources */,
+				047866E528B04D4E00875029 /* ProtectionTableView.swift in Sources */,
 				04E6390028AD885E004B4492 /* DashboardCell.swift in Sources */,
 				04E638D028AD79F8004B4492 /* FinalExam.xcdatamodeld in Sources */,
 				049DE65628AF0AE8000923D4 /* MainViewNavigation.swift in Sources */,
