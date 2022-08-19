@@ -31,7 +31,7 @@ class MainView: UIViewController {
         scrollView.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR)
         
         // set scroll content size
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1000)
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 900)
         
         // load the collection view
         self.loadCollectionView()
