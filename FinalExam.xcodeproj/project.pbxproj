@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		047866E528B04D4E00875029 /* ProtectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047866E428B04D4E00875029 /* ProtectionTableView.swift */; };
 		047866E728B04D9D00875029 /* ProtectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047866E628B04D9D00875029 /* ProtectionTableCell.swift */; };
+		047866EB28B169EA00875029 /* MainViewLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047866EA28B169EA00875029 /* MainViewLocalView.swift */; };
 		049DE63328AE6A8E000923D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE63228AE6A8E000923D4 /* Constants.swift */; };
 		049DE64D28AEB3A6000923D4 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 049DE64C28AEB3A6000923D4 /* Algorithms */; };
 		049DE65028AEB5D4000923D4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 049DE64F28AEB5D4000923D4 /* Charts */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		047866E428B04D4E00875029 /* ProtectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionTableView.swift; sourceTree = "<group>"; };
 		047866E628B04D9D00875029 /* ProtectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionTableCell.swift; sourceTree = "<group>"; };
+		047866EA28B169EA00875029 /* MainViewLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewLocalView.swift; sourceTree = "<group>"; };
 		049DE63228AE6A8E000923D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		049DE65128AECBDB000923D4 /* MainViewDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDashboard.swift; sourceTree = "<group>"; };
 		049DE65528AF0AE8000923D4 /* MainViewNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigation.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				049DE65528AF0AE8000923D4 /* MainViewNavigation.swift */,
 				049DE65128AECBDB000923D4 /* MainViewDashboard.swift */,
 				049DE65928AF1A3A000923D4 /* MainViewChartView.swift */,
+				047866EA28B169EA00875029 /* MainViewLocalView.swift */,
 				04E638CB28AD79F8004B4492 /* Main.storyboard */,
 				04E638D128AD79FE004B4492 /* Assets.xcassets */,
 				04E638D328AD79FE004B4492 /* LaunchScreen.storyboard */,
@@ -319,6 +322,7 @@
 				049DE63328AE6A8E000923D4 /* Constants.swift in Sources */,
 				049DE65228AECBDB000923D4 /* MainViewDashboard.swift in Sources */,
 				04E638C828AD79F8004B4492 /* SceneDelegate.swift in Sources */,
+				047866EB28B169EA00875029 /* MainViewLocalView.swift in Sources */,
 				047866E728B04D9D00875029 /* ProtectionTableCell.swift in Sources */,
 				04E638FB28AD7F66004B4492 /* AssessmentView.swift in Sources */,
 				047866E528B04D4E00875029 /* ProtectionTableView.swift in Sources */,
@@ -505,6 +509,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalExam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FinalExam;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -535,6 +540,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalExam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FinalExam;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

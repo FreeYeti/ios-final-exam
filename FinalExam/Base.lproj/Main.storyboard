@@ -46,12 +46,47 @@
                                             <constraint firstAttribute="height" constant="240" id="REi-DM-jnD"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-1s-x9g">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-1s-x9g" customClass="MainViewLocalView" customModule="FinalExam" customModuleProvider="target">
                                         <rect key="frame" x="10" y="570" width="394" height="240"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-qW-uCP">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="240"/>
+                                            </mapView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwT-sl-4JL">
+                                                <rect key="frame" x="0.0" y="20" width="394" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="JYM-Z3-iTD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzL-Nw-1p4">
+                                                <rect key="frame" x="0.0" y="50" width="394" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="MwT-sl-4JL" secondAttribute="trailing" id="7Ap-F5-gGT"/>
+                                            <constraint firstItem="bEa-qW-uCP" firstAttribute="top" secondItem="kZ3-1s-x9g" secondAttribute="top" id="JVm-JR-fVc"/>
+                                            <constraint firstItem="nzL-Nw-1p4" firstAttribute="top" secondItem="kZ3-1s-x9g" secondAttribute="top" constant="50" id="X2Z-CY-fFJ"/>
+                                            <constraint firstItem="MwT-sl-4JL" firstAttribute="top" secondItem="kZ3-1s-x9g" secondAttribute="top" constant="20" id="au8-xo-j5P"/>
+                                            <constraint firstItem="MwT-sl-4JL" firstAttribute="leading" secondItem="kZ3-1s-x9g" secondAttribute="leading" id="dTY-lb-Ndg"/>
                                             <constraint firstAttribute="height" constant="240" id="hLH-EL-TKW"/>
+                                            <constraint firstItem="bEa-qW-uCP" firstAttribute="leading" secondItem="kZ3-1s-x9g" secondAttribute="leading" id="kSs-2c-wB0"/>
+                                            <constraint firstAttribute="bottom" secondItem="bEa-qW-uCP" secondAttribute="bottom" id="mj6-V6-7ik"/>
+                                            <constraint firstAttribute="trailing" secondItem="nzL-Nw-1p4" secondAttribute="trailing" id="oH0-yI-fqP"/>
+                                            <constraint firstAttribute="trailing" secondItem="bEa-qW-uCP" secondAttribute="trailing" id="u6e-dS-dbb"/>
+                                            <constraint firstItem="nzL-Nw-1p4" firstAttribute="leading" secondItem="kZ3-1s-x9g" secondAttribute="leading" id="xOd-KB-LZ9"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="countryNameLabel" destination="MwT-sl-4JL" id="kGd-Im-Z31"/>
+                                            <outlet property="dataLabel" destination="nzL-Nw-1p4" id="J9v-ef-xrT"/>
+                                            <outlet property="map" destination="bEa-qW-uCP" id="yxG-Nc-esr"/>
+                                        </connections>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wGc-dK-YOb">
                                         <rect key="frame" x="10" y="830" width="394" height="80"/>
