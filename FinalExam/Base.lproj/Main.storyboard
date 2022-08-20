@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1989.8550724637682" y="103.79464285714285"/>
         </scene>
-        <!--Protection Table View-->
+        <!--COVID-19 Prevention Actions-->
         <scene sceneID="cgy-kh-DFi">
             <objects>
                 <tableViewController id="aJq-4O-XI9" customClass="ProtectionTableView" customModule="FinalExam" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,24 +148,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-mG-JiA">
-                                            <rect key="frame" x="30" y="21" width="354" height="10"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-mG-JiA">
+                                            <rect key="frame" x="30" y="14" width="354" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="Hwp-rW-8vE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-NX-wLq">
-                                            <rect key="frame" x="20" y="40.5" width="150" height="155.5"/>
+                                            <rect key="frame" x="20" y="68.5" width="150" height="127.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="95b-fu-suB"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF2-uO-25J">
-                                            <rect key="frame" x="180" y="41" width="234" height="145"/>
+                                            <rect key="frame" x="180" y="69" width="234" height="117"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="145" id="csF-8i-eBK"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -177,7 +180,7 @@
                                         <constraint firstItem="HJL-mG-JiA" firstAttribute="leading" secondItem="9xv-Q7-qPZ" secondAttribute="leadingMargin" constant="10" id="cqi-vp-FXn"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="HJL-mG-JiA" secondAttribute="trailing" constant="10" id="hVL-XR-dwu"/>
                                         <constraint firstAttribute="trailing" secondItem="UF2-uO-25J" secondAttribute="trailing" id="lpU-TM-eC1"/>
-                                        <constraint firstItem="HJL-mG-JiA" firstAttribute="top" secondItem="9xv-Q7-qPZ" secondAttribute="topMargin" constant="10" id="mWH-nr-Lbv"/>
+                                        <constraint firstItem="HJL-mG-JiA" firstAttribute="top" secondItem="9xv-Q7-qPZ" secondAttribute="topMargin" constant="3" id="mWH-nr-Lbv"/>
                                         <constraint firstItem="rbe-NX-wLq" firstAttribute="top" secondItem="HJL-mG-JiA" secondAttribute="bottom" constant="10" id="oJq-dM-Tt4"/>
                                         <constraint firstItem="rbe-NX-wLq" firstAttribute="leading" secondItem="9xv-Q7-qPZ" secondAttribute="leadingMargin" id="rdm-ab-tJE"/>
                                         <constraint firstAttribute="bottom" secondItem="UF2-uO-25J" secondAttribute="bottom" constant="10" id="zWA-KA-rLq"/>
@@ -196,7 +199,7 @@
                             <outlet property="delegate" destination="aJq-4O-XI9" id="vq0-qL-hnV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6NY-4P-6o6"/>
+                    <navigationItem key="navigationItem" title="COVID-19 Prevention Actions" id="6NY-4P-6o6"/>
                     <connections>
                         <outlet property="myTableView" destination="EgV-d7-Fcy" id="sKX-P9-FgL"/>
                     </connections>

@@ -10,8 +10,8 @@ import UIKit
 class ProtectionTableCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descImage: UIImageView!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var descImage: UIImageView?
+    @IBOutlet weak var descLabel: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,9 +27,18 @@ class ProtectionTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func config(title: String, img: UIImage, desc: String){
+    func config(title: String, img: UIImage?, desc: String?){
         titleLabel.text = title
-        descImage.image = img
-        descLabel.text = desc
+        if (img != nil){
+            descImage?.image = img
+        }else{
+            descImage?.removeFromSuperview()
+        }
+        if(desc != nil){
+            descLabel?.text = desc
+        }else{
+            descLabel?.removeFromSuperview()
+        }
+        
     }
 }
