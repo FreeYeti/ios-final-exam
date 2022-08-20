@@ -16,13 +16,14 @@ class MainViewChartView: UIView, ChartViewDelegate {
      so create this container first, then put the chart into this container.
      */
     
-    var barChart = BarChartView()
+    var chart = PieChartView()
     
     override func layoutSubviews() {
         self.clipsToBounds = false
         self.clipsToBounds = false
         
         // for border and background
+        self.layer.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR).cgColor
         self.layer.cornerRadius = 10.0
         self.layer.borderWidth = 1.0
         self.layer.borderColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
@@ -36,7 +37,7 @@ class MainViewChartView: UIView, ChartViewDelegate {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(rect: self.layer.bounds).cgPath
         
-        barChart.delegate = self
+        chart.delegate = self
         self.chartViewSubview()
     }
     
@@ -44,34 +45,48 @@ class MainViewChartView: UIView, ChartViewDelegate {
         return UINib(nibName: "BarChartView", bundle: nil)
     }
     
-    // pass data into the chart
-    public func config(){
-        
-    }
-    
     func chartViewSubview(){
-        // create chart frame
-        barChart.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         
-        // position of chart
-        // ...
-        // barChart.center = self.center // don't know why this error
+        // get covid data from json
+        let covidData = loadJson(filename: "covid_data")!
+        
+        // figures
+        let stateTotal = covidData.first?.totalConfirmed ?? 0
+        let stateDeaths = covidData.first?.totalDeaths ?? 0
+        let stateRecovered = covidData.first?.totalRecovered ?? 0
+        
+        // create chart frame
+        chart.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        
+        // chart color
+        chart.legend.textColor = CONFIG_TEXT_HIGHLIGHT_COLOR
+        chart.drawHoleEnabled = false
         
         // add to main view
-        self.addSubview(barChart)
+        self.addSubview(chart)
         
         // bind data
-        let set = BarChartDataSet(entries: [
-            BarChartDataEntry(x: 1, y: 1),
-            BarChartDataEntry(x: 2, y: 2),
-            BarChartDataEntry(x: 3, y: 3),
-            BarChartDataEntry(x: 4, y: 4)
+        let set = PieChartDataSet(entries: [
+            PieChartDataEntry(value: Double(stateTotal), label: "Total confirmed"),
+            PieChartDataEntry(value: Double(stateDeaths), label: "Deaths"),
+            PieChartDataEntry(value: Double(stateRecovered), label: "Total recovered"),
         ])
         
-        set.colors = ChartColorTemplates.liberty()
+        // chart config
+        set.colors = ChartColorTemplates.colorful()
+        set.drawIconsEnabled = false
+        set.sliceSpace = 2
+        set.selectionShift = 0
+        set.valueLinePart1OffsetPercentage = 0.20
+        set.valueLinePart1Length = 0.4
+        set.valueLinePart2Length = 0.4
+        set.valueLineColor = CONFIG_TEXT_COLOR
+        set.valueTextColor = CONFIG_TEXT_COLOR
+        set.xValuePosition = .outsideSlice
+        set.yValuePosition = .outsideSlice
         
-        let data = BarChartData(dataSet: set)
-        
-        barChart.data = data
+        // set data of chart
+        let data = PieChartData(dataSet: set)
+        chart.data = data
     }
 }

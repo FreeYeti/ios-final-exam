@@ -27,6 +27,7 @@ class MainView: UIViewController {
     // 1. the override functions for Navigation is in MainViewNavigation.swfit
     // 2. the functions for collection view is in the MainViewDashboard.swift
     // 3. the view for chart is in the MainViewChartView.swift
+    // 4. the view for local info is in the MainViewLocalView.swift
     
     override func viewDidLoad() {
         super.viewDidLoad()

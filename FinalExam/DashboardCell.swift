@@ -20,8 +20,8 @@ class DashboardCell: UICollectionViewCell {
     }
     
     public func config(title: String, value: String){
-        titleLabel.textColor = hexStringToUIColor(hex: "#5F7FB1")
-        valueLabel.textColor = hexStringToUIColor(hex: "#5F7FB1")
+        titleLabel.textColor = CONFIG_TEXT_COLOR
+        valueLabel.textColor = CONFIG_TEXT_COLOR
         titleLabel.text = title
         valueLabel.text = value
     }
