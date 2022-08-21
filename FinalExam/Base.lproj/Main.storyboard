@@ -158,6 +158,8 @@
                     <navigationItem key="navigationItem" id="PgJ-Ln-dGY"/>
                     <connections>
                         <outlet property="barChartView" destination="rCC-6l-Zvq" id="OFm-oD-p8g"/>
+                        <outlet property="btn1" destination="glz-c5-N8a" id="J3U-rd-Tyg"/>
+                        <outlet property="btn2" destination="Bm3-dQ-Szr" id="YLp-Xc-Wy1"/>
                         <outlet property="collectionView" destination="Lef-ld-YKW" id="hSU-Pt-xP6"/>
                         <outlet property="logoImageView" destination="UJO-dd-rIf" id="jO9-0R-SFM"/>
                         <outlet property="scrollView" destination="9wx-Hg-aZW" id="KhM-EI-5mj"/>

@@ -16,6 +16,9 @@ class MainView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var barChartView: UIView!
     
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    
     // the statistics figures
     var StateTotal: Int?
     var StateRecovered: Int?
@@ -37,10 +40,16 @@ class MainView: UIViewController {
         scrollView.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR)
         
         // set scroll content size
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 900)
+        let height = 940
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: Double(height))
         
         // load the collection view
         self.loadCollectionView()
+        
+        // colors for button
+//        btn1.layer.backgroundColor = CONFIG_BTN_PRIMARY_COLOR.cgColor
+//        btn2.layer.backgroundColor = CONFIG_BTN_PRIMARY_COLOR.cgColor
+//        btn1.titleLabel?.textColor = CONFIG_TEXT_COLOR
     }
 }
 

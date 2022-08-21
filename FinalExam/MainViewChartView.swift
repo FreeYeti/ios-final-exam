@@ -23,7 +23,7 @@ class MainViewChartView: UIView, ChartViewDelegate {
         self.clipsToBounds = false
         
         // for border and background
-        self.layer.backgroundColor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR).cgColor
+        self.layer.backgroundColor = hexStringToUIColor(hex: CONFIG_SECONDARY_BGCOLOR).cgColor
         self.layer.cornerRadius = 10.0
         self.layer.borderWidth = 1.0
         self.layer.borderColor = hexStringToUIColor(hex: CONFIG_HIGHLIGHT_COLOR).cgColor
@@ -59,7 +59,7 @@ class MainViewChartView: UIView, ChartViewDelegate {
         chart.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         
         // chart color
-        chart.legend.textColor = CONFIG_TEXT_HIGHLIGHT_COLOR
+        chart.legend.textColor = CONFIG_TEXT_COLOR
         chart.drawHoleEnabled = false
         
         // add to main view
@@ -73,7 +73,7 @@ class MainViewChartView: UIView, ChartViewDelegate {
         ])
         
         // chart config
-        set.colors = ChartColorTemplates.colorful()
+        set.colors = ChartColorTemplates.pastel()
         set.drawIconsEnabled = false
         set.sliceSpace = 2
         set.selectionShift = 0

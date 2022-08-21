@@ -75,6 +75,10 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             // stop tracking
             locationManager.stopUpdatingLocation()
             
+            // clear all overlays first
+            let overlays = map.overlays
+            map.removeOverlays(overlays)
+            
             // load the data
             loadLocalData(location)
             
