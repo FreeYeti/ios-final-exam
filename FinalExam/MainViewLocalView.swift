@@ -145,7 +145,7 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         // center position
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
 
-        let delta: Double = 15.0
+        let delta: Double = 80
         let span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         
@@ -195,8 +195,8 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         // I only have multipolygon here
         if let multipolygon = overlay as? MKMultiPolygon {
             let renderer = MKMultiPolygonRenderer(multiPolygon: multipolygon)
-            renderer.fillColor = UIColor(red: 220.0/255.0, green: 95.0/255.0,  blue: 19.0/255.0, alpha: 0.2)
-            renderer.strokeColor = UIColor.brown
+            renderer.fillColor = UIColor(red: 250.0/255.0, green: 250.0/255.0,  blue: 250.0/255.0, alpha: 0.4)
+            renderer.strokeColor = UIColor(red: 250.0/255.0, green: 250.0/255.0,  blue: 250.0/255.0, alpha: 0.8)
             return renderer
         }
         
