@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 // ref: https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values
 func hexStringToUIColor (hex:String) -> UIColor {
@@ -74,4 +75,19 @@ func decodeCovidData(covidData: [CovidData]) -> Void {
     for item in covidData {
         print(item.totalConfirmed)
     }
+}
+
+// parse geo json data from Natural Earth
+func parseGeoJson() -> [MKGeoJSONObject] {
+    if let url = Bundle.main.url(forResource: "ne_admin", withExtension: "geojson") {
+        do {
+            let data = try Data(contentsOf: url)
+            let geoJson = try MKGeoJSONDecoder().decode(data)
+            return geoJson
+        } catch {
+            print("error:\(error)")
+            return []
+        }
+    }
+    return []
 }

@@ -23,8 +23,14 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         countryNameLabel.text = "loading..."
         
         // config the text color for labels
-        countryNameLabel.textColor = CONFIG_TEXT_COLOR
-        dataLabel.textColor = CONFIG_TEXT_COLOR
+        countryNameLabel.textColor = CONFIG_TEXT_HIGHLIGHT_COLOR
+        dataLabel.textColor = CONFIG_TEXT_HIGHLIGHT_COLOR
+        
+        // label background
+        let bgcolor = hexStringToUIColor(hex: CONFIG_MAIN_BGCOLOR)
+        bgcolor.withAlphaComponent(0.5)
+        countryNameLabel.backgroundColor = bgcolor
+        dataLabel.backgroundColor = bgcolor
         
         map.delegate = self
         self.styleView()
@@ -69,7 +75,11 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             // stop tracking
             locationManager.stopUpdatingLocation()
             
+            // load the data
             loadLocalData(location)
+            
+            // zoom to area where user in
+            panToLocation(location)
         }// location
     } // locationManager
     
@@ -90,6 +100,7 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             if pm.count > 0 {
                 let pm = placemarks![0]
                 DispatchQueue.main.async {
+                    // update data of that country
                     self.countryNameLabel.text = "Data of \(pm.country ?? "your country")"
                     let countryData = self.getDataByCountryName(pm.country ?? "")
                     if countryData != nil {
@@ -97,9 +108,10 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
                         self.dataLabel.text = msg
                     }
                     
+                    // high light the country bound
+                    self.highLightCountry(location, pm.country ?? nil)
                 }
             }
-        
         }
     }
     
@@ -120,5 +132,59 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         }
         
         return nil
+    }
+    
+    func panToLocation(_ location: CLLocation) {
+        // center position
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+
+        let delta: Double = 15.0
+        let span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        
+        map.setRegion(region, animated: true)
+    } //render
+    
+    func highLightCountry(_ location: CLLocation, _ countryName: String?){
+        if countryName == nil {
+            return
+        }
+
+        let geoJson = parseGeoJson()
+//            let point = MKMapPoint(location.coordinate)
+//            let pointRect = MKMapRect(x: point.x, y: point.y, width: 0, height: 0)
+            
+        var overlays = [MKOverlay]()
+        for item in geoJson {
+            guard let feature = item as? MKGeoJSONFeature else {
+                return
+            }
+            
+            let properties = String(decoding: feature.properties!, as: UTF8.self)
+            if properties.contains(countryName!) {
+                for geo in feature.geometry {
+                    if let polygon = geo as? MKMultiPolygon{
+                        overlays.append(polygon)
+                    }
+                }
+                break
+            }
+            
+        }
+        
+        DispatchQueue.main.async {
+            self.map.addOverlays(overlays)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if let multipolygon = overlay as? MKMultiPolygon {
+            let renderer = MKMultiPolygonRenderer(multiPolygon: multipolygon)
+            renderer.fillColor = UIColor(red: 220.0/255.0, green: 95.0/255.0,  blue: 19.0/255.0, alpha: 0.5)
+            renderer.strokeColor = UIColor.brown
+            return renderer
+        }
+        
+        return MKOverlayRenderer(overlay: overlay)
     }
 }

@@ -16,6 +16,7 @@
 		049DE65228AECBDB000923D4 /* MainViewDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE65128AECBDB000923D4 /* MainViewDashboard.swift */; };
 		049DE65628AF0AE8000923D4 /* MainViewNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE65528AF0AE8000923D4 /* MainViewNavigation.swift */; };
 		049DE65A28AF1A3B000923D4 /* MainViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE65928AF1A3A000923D4 /* MainViewChartView.swift */; };
+		04C10A7328B1AB3900BCC7EB /* ne_admin.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 04C10A7228B1AB3800BCC7EB /* ne_admin.geojson */; };
 		04E638C628AD79F8004B4492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E638C528AD79F8004B4492 /* AppDelegate.swift */; };
 		04E638C828AD79F8004B4492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E638C728AD79F8004B4492 /* SceneDelegate.swift */; };
 		04E638CA28AD79F8004B4492 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E638C928AD79F8004B4492 /* MainView.swift */; };
@@ -59,6 +60,7 @@
 		049DE65128AECBDB000923D4 /* MainViewDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDashboard.swift; sourceTree = "<group>"; };
 		049DE65528AF0AE8000923D4 /* MainViewNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigation.swift; sourceTree = "<group>"; };
 		049DE65928AF1A3A000923D4 /* MainViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewChartView.swift; sourceTree = "<group>"; };
+		04C10A7228B1AB3800BCC7EB /* ne_admin.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ne_admin.geojson; sourceTree = "<group>"; };
 		04E638C228AD79F8004B4492 /* FinalExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E638C528AD79F8004B4492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E638C728AD79F8004B4492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				04E6390428ADD4E9004B4492 /* covid_data.json */,
+				04C10A7228B1AB3800BCC7EB /* ne_admin.geojson */,
 				04E638C528AD79F8004B4492 /* AppDelegate.swift */,
 				04E638C728AD79F8004B4492 /* SceneDelegate.swift */,
 				049DE63228AE6A8E000923D4 /* Constants.swift */,
@@ -289,6 +292,7 @@
 				04E6390528ADD4E9004B4492 /* covid_data.json in Resources */,
 				04E638D228AD79FE004B4492 /* Assets.xcassets in Resources */,
 				04E6390128AD885E004B4492 /* DashboardCell.xib in Resources */,
+				04C10A7328B1AB3900BCC7EB /* ne_admin.geojson in Resources */,
 				04E638CD28AD79F8004B4492 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
