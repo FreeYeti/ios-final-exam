@@ -83,6 +83,7 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         }// location
     } // locationManager
     
+    // load the country data of the user
     func loadLocalData(_ location: CLLocation){
         CLGeocoder().reverseGeocodeLocation(location) {(placemarks, error) in
             // if faided to read place marks
@@ -115,6 +116,7 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
+    // get covid data by country name
     func getDataByCountryName(_ countryName: String?) -> CovidData?{
         if countryName == nil {
             return nil
@@ -134,6 +136,7 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         return nil
     }
     
+    // zoom to user location
     func panToLocation(_ location: CLLocation) {
         // center position
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -145,23 +148,28 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         map.setRegion(region, animated: true)
     } //render
     
+    // high light the country which the user is at
     func highLightCountry(_ location: CLLocation, _ countryName: String?){
         if countryName == nil {
             return
         }
 
         let geoJson = parseGeoJson()
-//            let point = MKMapPoint(location.coordinate)
-//            let pointRect = MKMapRect(x: point.x, y: point.y, width: 0, height: 0)
-            
+        
+        // the list of overlay
         var overlays = [MKOverlay]()
+        
+        // read geojson items
         for item in geoJson {
             guard let feature = item as? MKGeoJSONFeature else {
                 return
             }
             
+            // search for country name in the data
             let properties = String(decoding: feature.properties!, as: UTF8.self)
             if properties.contains(countryName!) {
+                
+                // add multipolygon data to the overlay list
                 for geo in feature.geometry {
                     if let polygon = geo as? MKMultiPolygon{
                         overlays.append(polygon)
@@ -172,15 +180,18 @@ class MainViewLocalView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             
         }
         
+        // add the overlays to map
         DispatchQueue.main.async {
             self.map.addOverlays(overlays)
         }
     }
     
+    // the renderer function
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        // I only have multipolygon here
         if let multipolygon = overlay as? MKMultiPolygon {
             let renderer = MKMultiPolygonRenderer(multiPolygon: multipolygon)
-            renderer.fillColor = UIColor(red: 220.0/255.0, green: 95.0/255.0,  blue: 19.0/255.0, alpha: 0.5)
+            renderer.fillColor = UIColor(red: 220.0/255.0, green: 95.0/255.0,  blue: 19.0/255.0, alpha: 0.2)
             renderer.strokeColor = UIColor.brown
             return renderer
         }
